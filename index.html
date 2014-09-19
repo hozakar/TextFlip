@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="textflip.min.js"></script>
+        <link href="textflip.css" rel="stylesheet" />
+		<style>
+			body {
+				font-family: Georgia, Verdana;
+				font-size: 16px;
+                text-align: center;
+                padding-top: 60px;
+			}
+			
+            button {
+              border: 1px solid #cccccc;
+              background: #f3f3f3;
+              padding: 6px 12px;
+              border-radius: 3px;
+            }
+		</style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Lorem ipsum dolor sit amet...</h1>
+    
+            <button id="def">Default</button>
+            <button id="rot_x">RotateX</button>
+            <button id="rot_y">RotateY 1250ms</button>
+            <button id="rot_z">RotateZ Linear 2000ms</button>
+            <button id="rot_linear">RotateX Linear</button>
+            <button id="opa_linear">Opacity Linear</button>
+            <button id="rnd">Random Animation</button>
+        </div>
+
+        <script>
+            $('#def').click(function(){
+                $('h1').textflip()
+            });
+    
+            $('#rot_x').click(function(){
+                $('h1').textflip({
+                    animation: 'rotateX'
+                });
+            });
+    
+            $('#rot_y').click(function() {
+                $('h1').textflip({
+                    animation: 'rotateY',
+                    interval: 1250
+                });
+            });
+    
+            $('#rot_z').click(function() {
+                $('h1').textflip({
+                    animation: 'rotateZ',
+                    sequence: 'linear',
+                    interval: 2000
+                });
+            });
+    
+            $('#rot_linear').click(function(){
+                $('h1').textflip({
+                    animation: 'rotateX',
+                    sequence: 'linear'
+                });
+            });
+    
+            $('#opa_linear').click(function(){
+                $('h1').textflip({
+                    sequence: 'linear'
+                });
+            });
+
+            $('#rnd').click(function(){
+                $('h1').textflip({
+                    animation: 'random'
+                });
+            });
+        </script>
+    </body>
+</html>
