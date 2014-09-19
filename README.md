@@ -22,8 +22,20 @@ Then, textflip can be applied to any container element(s).
 
 ### Parameters
 * animation: rotateX, rotateY, rotateZ, opacity
-sequence: random, linear
-interval: Interval in milliseconds. If blank or 0, plugin will automatically apply a suitable interval.
+* sequence: random, linear
+* interval: Interval in milliseconds. If blank or 0, plugin will automatically apply a suitable interval.
+
+### Usage Example
+```html
+<script>
+  $('.element').textflip({
+    animation: 'rotateZ',
+    sequence: 'linear',
+    interval: 2000
+  });
+</script>
+```
+
 
 ### Dependencies
 * [jQuery](http://jquery.com/)
